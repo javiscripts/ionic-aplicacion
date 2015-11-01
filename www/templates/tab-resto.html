@@ -1,6 +1,6 @@
 <ion-view  view-title="Resto Ya!"> 
    <ion-content  ng-model="cambiarToggle()">
-     
+     {{usuario}}
       <ion-item  ng-show="ejemplo" class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in restaurantes" type="item-text-wrap" href="#/tab/resto/{{item.id}}">
         <img ng-src="{{item.face}}">
         <h2>{{item.nombre}}</h2>
