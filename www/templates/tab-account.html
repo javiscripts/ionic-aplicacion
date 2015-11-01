@@ -1,0 +1,67 @@
+<ion-view view-title="Mi cuenta" >
+
+  <!--Vistas desde usuario logueado-->
+  <ion-content class="padding"  >
+
+    <div ng-hide="!sesionIniciada" >
+      <div class="list card">
+        <div class="item item-divider">
+          Session iniciada como:
+        </div>
+        <div class="item item-body">
+          <div>
+            <div class="list"> {{usuario}} </div>
+          </div>
+        </div>
+      </div>
+
+      <center>
+        <div class="button-bar">
+          <a class="button button-royal">Editar cuenta</a>
+          <a class="button button-assertive" ng-click="logout()">Cerrar sesión </a>
+        </div>
+        <!-- BOTON QUE CAMBIABA
+        <a class="button icon-right ion-chevron-right button-assertive" href={{pantalla.bECurl}} >
+          {{pantalla.bECmessage}}
+        </a>  -->
+      </center>
+    </div>
+
+    <!--Vistas desde usuario no logueado-->
+    <div ng-show="!sesionIniciada" ng-hide="sesionIniciada">
+      <div class="item item-divider">Iniciar session</div>
+      <div class="item item-body">
+        <div>
+          <div class="list">
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Nick name</span>
+              <input type="text" placeholder="Usuario" ng-model="usuario">
+            </label>
+            <label class="item item-input item-floating-label">
+              <span class="input-label">Password</span>
+              <input type="password" placeholder="Contraseña" ng-model="clave">
+            </label>
+            <button class="button button-block button-dark" ng-click="login(usuario, clave)">
+              Entrar!
+            </button>
+{{mensaje}}			
+          </div>
+        </div>
+      </div>
+    </div>
+
+      
+      <div class="center">
+          <br>
+          <br> <br>
+          <br><br> <br>
+          <br>
+          <br> <br>
+          <br>
+          <a href="#/tab/account-create" class="icon-left ion-person-add button button-large button-positive">
+            Crear usuario nuevo
+            </a>
+      </div>
+
+  </ion-content>
+</ion-view>

@@ -1,0 +1,23 @@
+
+<ion-tabs class="tabs-icon-top tabs-color-ligth tabs-positive">
+
+  <!-- Resto tab -->
+  <ion-tab title="resto" icon-off="ion-map" icon-on="ion-map" href="#/tab/resto"  ng-clic="cambiarToggle()">
+    <ion-nav-view name="tab-resto">
+
+    </ion-nav-view>
+  </ion-tab>
+
+  <!-- Las notificaciones, favoritos, e historial irian aqui -->
+  <ion-tab title="notifications" icon-off="ion-fork" icon-on="ion-fork" href="#/tab/notifications"  ng-clic="cambiarToggle()" >
+    <ion-nav-view name="tab-notifications"></ion-nav-view>
+  </ion-tab>
+
+
+  <!-- Account Tab -->
+  <ion-tab title="Account" icon-off="ion-ios-gear-outline" icon-on="ion-ios-gear" href="#/tab/account"  ng-clic="cambiarToggle()">
+    <ion-nav-view name="tab-account" ></ion-nav-view>
+  </ion-tab>
+
+</ion-tabs>
+

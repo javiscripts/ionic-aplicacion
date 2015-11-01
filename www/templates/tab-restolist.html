@@ -1,0 +1,16 @@
+<ion-view view-title="Listado de restaurantes">
+  <ion-content>
+    <ion-list>
+      <ion-item class="item-remove-animate item-avatar item-icon-right" ng-repeat="item in restaurantes" type="item-text-wrap" href="#/tab/restolist/{{item.id}}">
+        <img ng-src="{{item.face}}">
+        <h2>{{item.nombre}}</h2>
+        <p>{{item.price}}</p>
+        <i class="icon ion-chevron-right icon-accessory"></i>
+
+        <ion-option-button class="button-assertive" ng-click="agregarFavorito(item)">
+          agregar a fav
+        </ion-option-button>
+      </ion-item>
+    </ion-list>
+  </ion-content>
+</ion-view>
