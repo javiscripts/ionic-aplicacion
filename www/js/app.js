@@ -65,7 +65,7 @@ angular.module('starter', ['ionic', 'leaflet-directive', 'starter.controllers', 
 
       //Muestra el detalle de dicho restaurante
       .state('tab.resto-detail', {
-        url: '/restolist/{restoId}',
+        url: '/restodetalle/:restoId',
         views: {
           'tab-restolist': {
             templateUrl: 'templates/resto-detail.html',

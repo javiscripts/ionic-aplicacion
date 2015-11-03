@@ -42,7 +42,9 @@ angular.module('starter.controllers', [])
 
   .controller('RestoDetailCtrl', function($scope, $stateParams, Resto) {
     Resto.getRbyId($stateParams.restoId, function(C){
-      $scope.restoSeleccionado = C[0];
+		// javier:  el [0] ya no va porque ahora devuelve objeto, no arreglo
+      $scope.restoSeleccionado = C;
+	  console.log("RestoDetailCtrl");
     });
   })
 
